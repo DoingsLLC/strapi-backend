@@ -6,7 +6,7 @@ module.exports = [
     name: 'strapi::cors',
     enabled: true,
     params: {
-      origin: ['http://localhost:5173', 'https://fastidious-kitten-a8ea31.netlify.app'],
+      origin: ['https://fastidious-kitten-a8ea31.netlify.app'],
       // You can also specify other CORS options here if needed
     }
   },
