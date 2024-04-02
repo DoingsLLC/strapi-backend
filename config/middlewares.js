@@ -2,14 +2,7 @@ module.exports = [
   'strapi::logger',
   'strapi::errors',
   'strapi::security',
-  {
-    name: 'strapi::cors',
-    enabled: true,
-    params: {
-      origin: ['https://fastidious-kitten-a8ea31.netlify.app'],
-      // You can also specify other CORS options here if needed
-    }
-  },
+  'strapi::cors',
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
@@ -17,3 +10,5 @@ module.exports = [
   'strapi::favicon',
   'strapi::public',
 ];
+
+
