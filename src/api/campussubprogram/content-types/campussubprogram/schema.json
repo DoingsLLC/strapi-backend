@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "campussubprograms",
+  "info": {
+    "singularName": "campussubprogram",
+    "pluralName": "campussubprograms",
+    "displayName": "Campussubprograms",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "campusprograms": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::campusprogram.campusprogram",
+      "mappedBy": "campussubprograms"
+    }
+  }
+}

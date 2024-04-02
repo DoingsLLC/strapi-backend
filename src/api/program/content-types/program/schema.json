@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "programs",
+  "info": {
+    "singularName": "program",
+    "pluralName": "programs",
+    "displayName": "Programs",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "onlineclass": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::onlineclasse.onlineclasse",
+      "inversedBy": "programs"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "courseType": {
+      "type": "string"
+    },
+    "courseDuration": {
+      "type": "string"
+    },
+    "Admission": {
+      "type": "richtext"
+    },
+    "Benifits": {
+      "type": "richtext"
+    },
+    "EmpOpp": {
+      "type": "richtext"
+    },
+    "courseDescription": {
+      "type": "blocks"
+    }
+  }
+}

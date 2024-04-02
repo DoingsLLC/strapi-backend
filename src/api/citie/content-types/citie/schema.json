@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cities",
+  "info": {
+    "singularName": "citie",
+    "pluralName": "cities",
+    "displayName": "Cities",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "campus": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::campuse.campuse",
+      "inversedBy": "cities"
+    },
+    "campusprograms": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::campusprogram.campusprogram",
+      "mappedBy": "city"
+    }
+  }
+}

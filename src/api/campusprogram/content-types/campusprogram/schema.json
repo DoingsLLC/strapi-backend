@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "campusprograms",
+  "info": {
+    "singularName": "campusprogram",
+    "pluralName": "campusprograms",
+    "displayName": "Campusprograms",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "city": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::citie.citie",
+      "inversedBy": "campusprograms"
+    },
+    "campussubprograms": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::campussubprogram.campussubprogram",
+      "inversedBy": "campusprograms"
+    }
+  }
+}
